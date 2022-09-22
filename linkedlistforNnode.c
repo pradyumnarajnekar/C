@@ -30,7 +30,7 @@ int main ()
       scanf("%d", &num);
       
       node1->num = num;
-      mode1->link = NULL;
+      node1->link = NULL;
       head = node1;
       temp = head;
       
