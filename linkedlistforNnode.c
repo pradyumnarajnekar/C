@@ -1,73 +1,66 @@
 // C program to create a singly linked list for N node
 
 #include<stdio.h>
-#include<stdlib.h>
-
-struct node
+#include<stdlib.h>//necessary header file for structures, further linked lists
+struct node//initialising node for the linked list
 {
-   int num;
-   struct node *link;
+   int data;//data part
+   struct node *next;//link part
 };
 int main ()
 {
-   struct node *node1, *node2, *temp, *head;
+   struct node *node1, *node2, *temporary, *head_start;
    int n;
-   printf("Linked List : To create and Display Singly Linked List : \n\n");
-   
    printf("Input the number of nodes :");
    scanf("%d", &n);
-   
-   int num, i;
-   node1 = malloc(sizeof(struct node));
-   
+   int data, i;
+   node1 = malloc(sizeof(struct node));// memory allocation for the node
    if(node1 == NULL)
    {
-      printf("Memory can not be allocated \n");
+      printf("List cannot be created\n");
    }
    else
    {
       printf("Input data for node 1 : \n");
-      scanf("%d", &num);
-      
-      node1->num = num;
-      node1->link = NULL;
-      head = node1;
-      temp = head;
-      
+      scanf("%d", &data);
+      node1->data = data;
+      node1->next = NULL;
+      head_start = node1;
+      temporary = head_start;
       for(i=2; i<=n; i++)
       {
-         node2 = malloc(sizeof(struct node));
+         node2 = malloc(sizeof(struct node));// memory allocation for the node
          
          if(node2 == NULL)
          {
-            printf("Memory can not be allocated\n");
+            printf("List cannot be created\n");
             break;
          }
          else
          {
             printf("Input data for node %d : \n", i);
-            scanf("%d", &num);
+            scanf("%d", &data);
             
-            node2-> num = num;
-            node2-> link = NULL;
-            temp-> link = node2;
-            temp = temp -> link;
+            node2-> data = data;
+            node2-> next = NULL;
+            temporary-> next = node2;
+            temporary = temporary -> next;
          }
       }
    }
-   printf("\n Data entered in the list : \n");
-   if(head == NULL)
+   printf("Data entered in the list : \n");
+   if(head_start == NULL)
    {
-      printf("List is Empty \n");
+      printf("List is Empty\n");
    }
    else
    {
-      temp = head;
+      temporary = head_start;
       
-      while(temp != NULL)
+      while(temporary != NULL)
       {
-         printf("%d -> ", temp->num);
-         temp = temp -> link;
+         printf("%d => ", temporary->data);
+         temporary = temporary -> next;
       }
    }
    return 0;
