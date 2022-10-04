@@ -47,8 +47,8 @@ int main ()
             temporary = temporary -> next;
          }
       }
-   }
-   printf("Data entered in the list : \n");
+   }// here the linked list creation is over but to see it working you need to traverse it
+   printf("Data entered in the list : \n"); // traversing
    if(head_start == NULL)
    {
       printf("List is Empty\n");
