@@ -75,7 +75,7 @@ int main()
          temporary1=temporary1->next;
       }
    }
-   printf("\nAfter deletion, the linked list : \n");
+   printf("\nAfter updation, the linked list : \n");
    temporary1 = head_start;
    while(temporary1 != NULL)
    {
