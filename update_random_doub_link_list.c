@@ -14,7 +14,7 @@ int main()
     scanf("%d",&n);
     if(n>=1)
     {
-        head_start=malloc(sizeof(struct node));
+        head_start= (struct node*) malloc(sizeof(struct node));
         if(head_start!=NULL)
         {
             printf("\nEnter the data for the node 1 : ");
@@ -25,7 +25,7 @@ int main()
             tail_end=head_start;
             for(int i=2;i<=n;i++)
             {
-                temporary=malloc(sizeof(struct node));
+                temporary=(struct node*)malloc(sizeof(struct node));
                 if(temporary!=NULL)
                 {
                     printf("\nEnter the data for the node %d : ",i);
