@@ -16,7 +16,7 @@ int main()
         printf("%d, ",arr[i]);
     }
     printf("\nNow sorting the array using bubble sort\n");
-    for(int i=0; i<n-1; i++)
+    for(int i=0; i<n-1; i++)//n-1 because for n elements, there exists n-1 passes
     {
         for(int j=0; j<n-i-1; j++)//doubt : why we took another another j variable?
         {
