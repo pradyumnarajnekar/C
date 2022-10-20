@@ -18,7 +18,7 @@ int main()
     printf("\nNow sorting the array using bubble sort\n");
     for(int i=0; i<n-1; i++)//n-1 because for n elements, there exists n-1 passes
     {
-        for(int j=0; j<n-i-1; j++)//doubt : why we took another another j variable?
+        for(int j=0; j<n-i-1; j++)//doubt : why we took another another j variable? -> reason : i is for number of passes, and j is for number of indexes in a particular array.
         {
             if(arr[j]>arr[j+1])//logic : if 2>1 then it will be swapped
             {
